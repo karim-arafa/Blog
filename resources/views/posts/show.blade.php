@@ -20,9 +20,9 @@
     </div>
     <div class="card-body">
       <h5 class="card-title">Name:</h5>
-      <p class="card-text">{{ $post->posted_by }}</p>
+      <p class="card-text">{{ $post->user->name }}</p>
       <h5 class="card-title">Email:</h5>
-      <p class="card-text">{{ $post->Email }}</p>
+      <p class="card-text">{{ $post->user->email }}</p>
       <h5 class="card-title">Created at:</h5>
       <p class="card-text">{{ \Carbon\Carbon::parse($post->created_at, 'd/m/Y H:i:s')->isoFormat('ddd Do \of MMMM YYYY, h:mm:ss a') }}</p>
     </div>
